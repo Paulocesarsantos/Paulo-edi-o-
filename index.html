@@ -1,108 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paulo Editor - Portfólio</title>
+  <title>Portfólio PauloEdição</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       background: #f4f4f9;
       color: #333;
     }
     header {
       background: #111;
-      color: white;
-      padding: 20px;
+      color: #fff;
       text-align: center;
+      padding: 20px;
     }
-    header img {
-      max-width: 180px;
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
     }
     section {
       padding: 40px 20px;
-      text-align: center;
+      max-width: 1000px;
+      margin: auto;
     }
     h2 {
-      margin-bottom: 20px;
-      color: #222;
-    }
-    .videos iframe {
-      width: 300px;
-      height: 520px;
-      margin: 10px;
-      border-radius: 12px;
-      border: none;
-    }
-    footer {
-      background: #111;
-      color: white;
       text-align: center;
-      padding: 20px;
+      margin-bottom: 20px;
     }
-    footer a {
-      color: #25D366;
-      text-decoration: none;
-      font-weight: bold;
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
-    /* Botão WhatsApp flutuante */
-    .whatsapp-float {
+    .video iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    /* Botão WhatsApp fixo */
+    .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
+      background: #25d366;
       color: white;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-    .whatsapp-float img {
-      width: 35px;
-      height: 35px;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho com logo -->
   <header>
-    <img src="Logo de Paulo Editor.png" alt="Paulo Editor Logo">
-    <h1>Bem-vindo ao meu Portfólio</h1>
-    <p>Transformo vídeos simples em conteúdo profissional 🎬</p>
+    <h1>Transformo vídeos simples em conteúdo profissional 🎬</h1>
   </header>
 
-  <!-- Seção de vídeos -->
   <section>
     <h2>Meus Trabalhos</h2>
     <div class="videos">
-      <iframe src="https://www.tiktok.com/embed/7388239117722707243"></iframe>
-      <iframe src="https://www.tiktok.com/embed/7388241264383773994"></iframe>
-      <iframe src="https://www.tiktok.com/embed/7388241987569886470"></iframe>
+
+      <!-- Vídeo 1 -->
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Vídeo 2 -->
+      <div class="video">
+        <iframe src="https://www.tiktok.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Vídeo 3 -->
+      <div class="video">
+        <iframe src="https://www.instagram.com/p/VIDEO_ID3/embed" frameborder="0" allowfullscreen></iframe>
+      </div>
+
     </div>
   </section>
 
-  <!-- Contato -->
-  <section>
-    <h2>Entre em Contato</h2>
-    <p>Quer transformar seus vídeos em algo profissional? Fale comigo!</p>
-    <p><a href="https://wa.me/5521960147742" target="_blank">📲 Chamar no WhatsApp</a></p>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>© 2025 Paulo Editor - Todos os direitos reservados</p>
-  </footer>
-
-  <!-- Botão flutuante do WhatsApp -->
-  <a href="https://wa.me/5521960147742" class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <!-- Botão WhatsApp -->
+  <a class="whatsapp" href="https://wa.me/5521960147742" target="_blank">💬</a>
 
 </body>
 </html>
