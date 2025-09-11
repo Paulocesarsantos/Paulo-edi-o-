@@ -1,94 +1,173 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio PauloEdição</title>
+  <title>Paulo Edição</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: #fff;
+      background: rgba(128, 0, 128, 0.08); /* fundo roxo transparente */
+      color: #222;
       text-align: center;
-      padding: 20px;
     }
+
+    header {
+      background: linear-gradient(135deg, #4b0082, #800080);
+      color: white;
+      padding: 40px 20px;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 1.8em;
+      font-size: 40px;
+      font-weight: bold;
+      color: #25d366;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 20px;
+      color: #ddd;
+    }
+
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     h2 {
-      text-align: center;
       margin-bottom: 20px;
+      font-size: 26px;
+      color: #4b0082;
     }
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+
+    .video {
+      margin-bottom: 30px;
     }
-    .video iframe {
+
+    iframe {
       width: 100%;
-      height: 550px; /* altura maior para TikTok */
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
-    /* Botão WhatsApp fixo */
+
+    /* Gráfico */
+    .chart-container {
+      margin: 40px auto;
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    /* Botão WhatsApp */
     .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #25d366;
-      color: white;
       border-radius: 50%;
       padding: 15px;
-      text-decoration: none;
-      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp img {
+      width: 30px;
+      height: 30px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Transformo vídeos simples em conteúdo profissional 🎬</h1>
+    <h1>Paulo Edição</h1>
+    <p>Transformo vídeos simples em conteúdo profissional 🎬</p>
   </header>
 
   <section>
     <h2>Meus Trabalhos no TikTok</h2>
-    <div class="videos">
 
-      <!-- TikTok Vídeo 1 -->
-      <div class="video">
-        <iframe src="https://www.tiktok.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <!-- TikTok Vídeo 1 -->
+    <div class="video">
+      <iframe src="https://www.tiktok.com/embed/7547470668758125880" allowfullscreen></iframe>
+    </div>
 
-      <!-- TikTok Vídeo 2 -->
-      <div class="video">
-        <iframe src="https://www.tiktok.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <!-- TikTok Vídeo 2 -->
+    <div class="video">
+      <iframe src="https://www.tiktok.com/embed/7547472239164247302" allowfullscreen></iframe>
+    </div>
 
-      <!-- TikTok Vídeo 3 -->
-      <div class="video">
-        <iframe src="https://www.tiktok.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <!-- TikTok Vídeo 3 -->
+    <div class="video">
+      <iframe src="https://www.tiktok.com/embed/7547136280270785848" allowfullscreen></iframe>
+    </div>
+  </section>
 
+  <!-- Seção com gráfico -->
+  <section>
+    <h2>Crescimento do meu trabalho 📈</h2>
+    <div class="chart-container">
+      <canvas id="grafico"></canvas>
     </div>
   </section>
 
   <!-- Botão WhatsApp -->
-  <a class="whatsapp" href="https://wa.me/5521960147742" target="_blank">💬</a>
+  <a class="whatsapp" href="https://wa.me/5521960147742" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <script>
+    const ctx = document.getElementById('grafico');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+        datasets: [{
+          label: 'Seguidores no TikTok',
+          data: [200, 450, 800, 1500, 2500, 4000],
+          borderColor: '#4b0082',
+          backgroundColor: 'rgba(75, 0, 130, 0.3)',
+          borderWidth: 3,
+          tension: 0.4,
+          pointBackgroundColor: '#25d366'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: { color: '#111' }
+          }
+        },
+        scales: {
+          x: { ticks: { color: '#333' } },
+          y: { ticks: { color: '#333' } }
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
+
 
 
