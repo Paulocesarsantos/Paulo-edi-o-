@@ -1,137 +1,110 @@
-            <!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paulo Editor - Edição Profissional de Vídeos</title>
+  <title>Paulo Edição - Portfólio</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #1e1e2f;
-      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #fff;
       text-align: center;
     }
-
     header {
-      background: linear-gradient(135deg, #9b59b6, #6a1b9a);
-      padding: 20px;
+      background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+      padding: 40px 20px;
     }
-
     header img {
-      max-width: 180px;
+      max-width: 120px;
+      margin-bottom: 15px;
     }
-
-    h1 {
-      margin-top: 10px;
-      font-size: 2.5rem;
-      color: #f1c40f;
+    header h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
     }
-
-    p {
-      font-size: 1.2rem;
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
-
-    .social-links {
+    .social-buttons {
       margin: 20px 0;
     }
-
-    .social-links a {
+    .social-buttons a {
       margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: #ffffff;
-      background: #9b59b6;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: 0.3s;
+      display: inline-block;
     }
-
-    .social-links a:hover {
-      background: #f1c40f;
-      color: #1e1e2f;
+    .social-buttons img {
+      width: 45px;
+      height: 45px;
     }
-
-    .video-section {
-      margin: 40px auto;
-      max-width: 700px;
+    section {
+      padding: 40px 20px;
     }
-
-    iframe {
+    .videos iframe {
       width: 100%;
-      max-width: 700px;
-      height: 400px;
-      border-radius: 12px;
-      border: none;
+      max-width: 400px;
+      height: 500px;
+      border-radius: 10px;
+      margin: 15px;
     }
-
-    /* Botão flutuante WhatsApp */
+    footer {
+      background: #111;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #9b59b6;
+      text-decoration: none;
+    }
+    /* Botão WhatsApp flutuante */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 30px;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       z-index: 1000;
-      transition: transform 0.3s;
     }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    footer {
-      background: #111;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      font-size: 1rem;
-      color: #ccc;
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <img src="Logo de Paulo Editor.png" alt="Logo Paulo Editor">
-    <h1>Edição Profissional de Vídeos 🎬</h1>
-    <p>Transformo vídeos simples em conteúdo envolvente e profissional!</p>
+    <h1>Transformo seus vídeos em conteúdo profissional 🎬</h1>
+    <p>Alcance mais engajamento no TikTok e Instagram com edições únicas!</p>
+
+    <!-- Botões Redes Sociais -->
+    <div class="social-buttons">
+      <a href="https://www.facebook.com/share/1B7ZZ8F8UQ/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/paul.inhoedicao?igsh=cWI1Z2U0am5rMW04" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
   </header>
 
-  <div class="social-links">
-    <a href="https://www.facebook.com/share/1B7ZZ8F8UQ/" target="_blank">🌐 Facebook</a>
-    <a href="https://www.instagram.com/paul.inhoedicao?igsh=cWI1Z2U0am5rMW04" target="_blank">📸 Instagram</a>
-  </div>
-
-  <!-- SEÇÃO DO VÍDEO -->
-  <section class="video-section">
-    <h2>Confira meu trabalho 👇</h2>
-    <iframe 
-      src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/share/r/1JDT6LR7RA/&show_text=false&width=500" 
-      allowfullscreen="true" 
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-    </iframe>
+  <section class="videos">
+    <h2>Meus Vídeos no TikTok</h2>
+    <iframe src="https://www.tiktok.com/embed/7549523752522960134" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.tiktok.com/embed/7547472239164247302" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.tiktok.com/embed/7547470668758125880" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.tiktok.com/embed/7547136280270785848" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5521960147742" class="whatsapp-float" target="_blank">💬</a>
-
-  <!-- Rodapé -->
   <footer id="contato">
-    <p>📩 Contato: <a href="mailto:contato@pauloeditor.com" style="color:#9b59b6;">contato@pauloeditor.com</a></p>
+    <p>📩 Contato: <a href="mailto:contato@pauloeditor.com">contato@pauloeditor.com</a></p>
     <p>© 2025 Paulo Editor - Todos os direitos reservados</p>
   </footer>
 
+  <!-- Botão WhatsApp flutuante -->
+  <a href="https://wa.me/5521960147742" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
 </body>
 </html>
-    
-
-
